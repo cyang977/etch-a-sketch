@@ -67,6 +67,7 @@ function createGrid(input = 256) {
     // Used to color in boxes by adding "hover" class to divs.
     const divSelect = document.querySelectorAll('.box');
     divSelect.forEach(coverDiv => coverDiv.addEventListener('mouseover', (e) => {
-    e.target.classList.add('hover');
-}))
+        e.target.classList.add('hover');
+        e.target.style.setProperty('background', `#${Math.floor(Math.random()*16777215).toString(16)}`);
+    }))
 }
